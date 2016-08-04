@@ -30,7 +30,6 @@
 		  //刪除最後一個
 		  if(num>1)
 		  document.getElementById("mytable").deleteRow(-1);
-		 
 		}
 		</script>
 	</head>
@@ -46,7 +45,7 @@
 			    		<h3 class="panel-title">活動報名後台</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form name="form" method="post" action="/book_active/back/back_page">
+			    		<form name="form" method="post" action="/book_active/back/createActive">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
