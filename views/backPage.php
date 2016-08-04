@@ -49,43 +49,43 @@
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			                <input type="text" name="first_name" id="act_name" class="form-control input-sm" placeholder="活動名稱">
+			                <input type="text" name="act_name" id="act_name" class="form-control input-sm" placeholder="活動名稱">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="max_per" class="form-control input-sm" placeholder="人數限制">
+			    						<input type="text" name="max_per" id="max_per" class="form-control input-sm" placeholder="人數限制">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
 			    						<label>可否攜伴</label>
-			    						<input type="checkbox" name="last_name" id="check_part" class="form-control input-sm">
+			    						<input type="checkbox" name="checkbox" id="check_part" class="form-control input-sm">
 			    					</div>
 			    				</div>
 			    			</div>
 			    			<div class="form-group">
 			    				<label for="bookdate">開始日期：</label>
-								<input type="date" id="bookdate_start" placeholder="2014-09-18" min="2016-08-04" max="2017-09-18">
+								<input type="date" name="bookdate_start" id="bookdate_start" placeholder="2014-09-18" min="2016-08-04" max="2017-09-18">
 			    			</div>
 			    			<div class="form-group">
 			    				<label for="bookdate">結束日期：</label>
-								<input type="date" id="bookdate_end" placeholder="2014-09-18" min="2016-08-04">
+								<input type="date" name="bookdate_end" id="bookdate_end" placeholder="2014-09-18" min="2016-08-04">
 			    			</div>
 							<div class="form-group">
-			    				<label for="bookdate">報名網址：</label>
-								<input type="text" id="bookdate_end">
+			    				<label>報名網址：</label>
+								<input type="text" id="url" name="url">
 								<input type="button" value="產生" onclick=""> 
 			    			</div>
 
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<label for="bookdate">可參加員工編號：</label>
+			    						<label>可參加員工編號：</label>
 			    						<table id="mytable" width="300">
 										  <tr>
 										    <td>
-										    <input name="name[]" type="text" size="12">
+										    <input name="name" type="text" size="12">
 										    
 										  <td>
 											  <input type="button" value="增加" onclick="add_new_data()"> 

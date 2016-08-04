@@ -1,9 +1,11 @@
 <?php
 class backController extends Controller {
     function back_page(){
-    $this->view("backPage");
+        $this->view("backPage");
     }
-    function creatActive(){//創活動
+    function createActive(){//創活動
+        $create=$this->model("createActive");
+        $create->create($_POST);
         
     }
     function showActive(){
