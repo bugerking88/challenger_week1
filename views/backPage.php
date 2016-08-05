@@ -1,3 +1,4 @@
+
 <html>
 	<?php ?>
 	<head>
@@ -20,7 +21,7 @@
 		 //建立新的td 而Tr.cells.length就是這個tr目前的td數
 		 Td = Tr.insertCell(Tr.cells.length);
 		 //而這個就是要填入td中的innerHTML
-		 Td.innerHTML='<input name="name[]" type="text" size="12">';
+		 Td.innerHTML='<input name="employee_id[]" type="text" size="12">';
 		 //這裡也可以用不同的變數來辨別不同的td (我是用同一個比較省事XD)
 		 //這樣就好囉 記得td數目要一樣 不然會亂掉~
 		}
@@ -80,7 +81,7 @@
 			    						<table id="mytable" width="300">
 										  <tr>
 										    <td>
-										    <input name="name" type="text" size="12">
+										    <input name="employee_id[]" type="text" size="12">
 										    
 										  <td>
 											  <input type="button" value="增加" onclick="add_new_data()"> 
