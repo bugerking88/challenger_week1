@@ -1,4 +1,5 @@
 <html>
+	<?php ?>
 	<head>
 		<meta charset="utf-8">
 		<link href="/book_active/css/form.css" rel="stylesheet">
@@ -72,12 +73,6 @@
 			    				<label for="bookdate">結束日期：</label>
 								<input type="date" name="bookdate_end" id="bookdate_end" placeholder="2014-09-18" min="2016-08-04">
 			    			</div>
-							<div class="form-group">
-			    				<label>報名網址：</label>
-								<input type="text" id="url" name="url">
-								<input type="button" value="產生" onclick=""> 
-			    			</div>
-
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
@@ -103,24 +98,26 @@
 			    	</div>
 	    		</div>
     		</div>
-			    	<div>
+			    	<div class="container">
 						<table class="table">
 					      <tr>
-					        <th>#活動編號</th>
 					        <th>活動名稱</th>
 					        <th>限制人數</th>
 					        <th>開始時間</th>
 					        <th>結束時間</th>
 					        <th>活動網址</th>
 					      </tr>
+					      	<?php for($i=0;$i<count($data);$i++){ ?>
 					      <tr>
-					        <th></th>
-					        <th></th>
-					        <th></th>
-					        <th></th>
-					        <th></th>
-					        <th></th>
+					        <th><?php echo $data[$i]['act_name']?></th>
+					        <th><?php echo $data[$i]['max_person']?></th>
+					        <th><?php echo $data[$i]['start_time']?></th>
+					        <th><?php echo $data[$i]['end_time']?></th>
+				
+					        <th><?php echo "<a href='../font/font_page/".$data[$i]['url']."'>".$data[$i]['url']."</a>"?></th>
 					      </tr>
+					        <?php } ?>
+
 					      </table>
 					</div>
     	</div>
