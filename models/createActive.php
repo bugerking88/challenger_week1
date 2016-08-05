@@ -11,6 +11,11 @@ class createActive extends connect_two{
 	        '".$part."','".$_POST["bookdate_start"]."', '".$_POST["bookdate_end"]."','".$_POST["url"]."')";
 	 $this->connect_mysql($sql);
     }
+    function activeShow(){
+        $sql="SELECT * FROM `active_table`";
+	    $activeShow=$this->connect_getdata($sql);
+	    return $activeShow;
+    }
 }
 
 ?>
