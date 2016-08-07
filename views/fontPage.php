@@ -16,6 +16,7 @@
   <li><a class="active" href="/book_active/back/back_page">後台</a></li>
   <li><a href="/book_active/font/font_page">前台</a></li>
 </ul>
+<form name="form" method="post" action="/book_active/font/participate">
         <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
         	<div class="panel panel-default">
@@ -43,6 +44,6 @@
 	    		</div>
     		</div>
     	</div>
-    </div>
+    </form>
 </body>
 </html>

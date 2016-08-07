@@ -1,15 +1,15 @@
 <?php
-require_once("PDO_getdata.php");
-class createActive extends connect_two{
+require_once("PDO_connect.php");
+class createActive extends PDO_connect{
     function create($post){
         $date = new DateTime();
         $url=rand(1000,9999).$date->getTimestamp().rand(1000,9999);
         if($_POST["partner"]="on")$part="yes";
         else $part="no";
         $sql = "INSERT INTO `active_table` (`act_name`, `max_person`, `partner`, `start_time`,`end_time`,`url`) 
-            values('".$_POST["act_name"]."','".$_POST["max_person"]."',
+            values('".$_POST["act_name"]."','".$_POST["max_per"]."',
             '".$part."','".$_POST["bookdate_start"]."', '".$_POST["bookdate_end"]."','".$url."')";
-        $this->connect_mysql($sql);
+        $this->connect_PDO($sql);
         return $url;
     }
     function activeShow(){
@@ -25,7 +25,7 @@ class createActive extends connect_two{
             echo $value;
             $a = $act_id[0]['act_id'];
             $sql="INSERT INTO `active_memo` (`employee_id`,`act_id`) values('$value','$a')";
-            $this->connect_mysql($sql);
+            $this->connect_PDO($sql);
         }
     }
 }
