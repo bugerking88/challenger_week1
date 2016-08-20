@@ -2,7 +2,7 @@
 
 class backController extends Controller
 {
-    public function back_page()
+    public function backPage()
     {
         $result = $this->showActive();
         $this->view("backPage",$result);
