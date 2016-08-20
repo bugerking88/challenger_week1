@@ -35,9 +35,14 @@
 			    			</div>
 			    			<div class="form-group">
 			    				<label>攜伴人數：</label>
-								<input type="text" id="partner_count">
+								<select name="part_count" id="part_count">
+								　<option value="Taipei">台北</option>
+								　<option value="Taoyuan">桃園</option>
+								　<option value="Hsinchu">新竹</option>
+								　<option value="Miaoli">苗栗</option>
+								</select>
 			    			</div>
-			    			<input type="submit" value="參加活動" class="btn btn-info btn-block">
+			    			<input type="submit" value="參加活動" class="btn btn-info btn-block" id="submit">
 			    		
 			    		</form>
 			    	</div>

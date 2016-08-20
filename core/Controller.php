@@ -1,7 +1,7 @@
 <?php
 
 class Controller {
-    public function model($model) {
+    public function model($model,$data = NULL) {
         require_once "../book_active/models/$model.php";
         return new $model ();
     }

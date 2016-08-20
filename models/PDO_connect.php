@@ -12,9 +12,9 @@ class PDO_connect{
                 return $this->result;
         }
         function connect_getdata($com){
-        $this->connect_PDO($com);
-        $row=$this->result->fetchAll(PDO::FETCH_ASSOC);
-        return $row;
+                $this->connect_PDO($com);
+                $row=$this->result->fetchAll(PDO::FETCH_ASSOC);
+                return $row;
         }
 }
         
