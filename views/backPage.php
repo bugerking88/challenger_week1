@@ -6,10 +6,10 @@
 		<link href="/book_active/css/form.css" rel="stylesheet">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		
+
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		
+
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script>
@@ -37,8 +37,8 @@
 	</head>
 	<body>
  <ul>
-  <li><a class="active" href="/book_active/back/back_page">後台</a></li>
-  <li><a class="bg-danger" href="/book_active/font/font_page">前台</a></li>
+  <li><a class="active" href="/book_active/back/backPage">後台</a></li>
+  <li><a class="bg-danger" href="/book_active/font/fontPage">前台</a></li>
 </ul>
         <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
@@ -82,19 +82,19 @@
 										  <tr>
 										    <td>
 										    <input name="employee_id[]" type="text" size="12">
-										    
+
 										  <td>
-											  <input type="button" value="增加" onclick="add_new_data()"> 
+											  <input type="button" value="增加" onclick="add_new_data()">
 											  <input type="button" value="減少" onclick="remove_data()">
-										 
+
 										  </tr>
 										</table>
 			    					</div>
 			    				</div>
 			    			</div>
-			    			
+
 			    			<input type="submit" value="創建活動" class="btn btn-info btn-block">
-			    		
+
 			    		</form>
 			    	</div>
 	    		</div>
@@ -109,14 +109,14 @@
 					        <th>結束時間</th>
 					        <th>活動網址</th>
 					      </tr>
-					      	<?php for($i=0;$i<count($data);$i++){ ?>
+					      	<?php for($i = 0; $i<count($data); $i++){ ?>
 					      <tr>
 					        <th><?php echo $data[$i]['act_name']?></th>
 					        <th><?php echo $data[$i]['max_person']?></th>
 					        <th><?php echo $data[$i]['partner']?></th>
 					        <th><?php echo $data[$i]['start_time']?></th>
 					        <th><?php echo $data[$i]['end_time']?></th>
-					        <th><?php echo "<a href='../font/font_page/?id=".$data[$i]['url']."'>".$data[$i]['url']."</a>"?></th>
+					        <th><?php echo "<a href='../font/fontPage/?id=".$data[$i]['url']."'>".$data[$i]['url']."</a>"?></th>
 					      </tr>
 					        <?php } ?>
 
